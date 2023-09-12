@@ -26,6 +26,6 @@ class TestRippleMediaLists(TestCase):
         create_employee_email_address()
 
         self.assertEqual(
-            "ash rahman\n['daffy', 'duck']\ndaffy.duck\ndaffy.duck@ripplemedia.com\n",
+            "daffy duck\n['daffy', 'duck']\ndaffy.duck\ndaffy.duck@ripplemedia.com\n",
             mock_stdout.getvalue()
         )
