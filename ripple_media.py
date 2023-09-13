@@ -43,7 +43,7 @@ def box_office_data():
     # Let's use conditional logic again to check if the last movie in the list is now "Anywhere But Here".
     # Use 'indexing' and conditional logic to check.
     # NOTE: if there are 50 movies in the list, what's the index of the final movie?
-    print(remaining_50_list[-1])
+    print(remaining_50_list[-1]) == 'Anywhere But Here'
 
     # 1.4 TODO: Let's make sure "remaining_50_list" has exactly 50 movie titles.
     # Print out the number of title-strings in the list (count it with code!)
@@ -52,15 +52,17 @@ def box_office_data():
     # 1.5 TODO: Great! Let's combine the two lists into one list called `top_100`.
     # NOTE: Which list should be first when you combine them? The top 50 titles, or the remaining 50?
     # Print out the number of title-strings in the list (count it with code!)
-    top_100 = remaining_50_list + top_50_list
+    # top_50_list.append(remaining_50_list)
+    top_50_list.extend(remaining_50_list)
+    top_100 = top_50_list
+    print(len(top_100))
     # 1.6 TODO: Let's print the first movie in our `top_100`list.
-    print(top_100[0])
     # Use 'indexing' to do this.
+    print(top_100[0])
 
     # 1.7 TODO: Print the top 10 movies in `top_100` as a list.
     # Use 'slicing' to accomplish this!
-    top_10 = slice(10)
-    print(top_100[top_10])
+    print(top_100[0:10])
 
 
 def create_employee_email_address():
@@ -70,7 +72,7 @@ def create_employee_email_address():
     # ex: FirstName LastName -> firstname.lastname@ripplemedia.com
     # Let's write some code that converts a name into an email id that matches this format
 
-    employee_name = 'ash rahman'
+    employee_name = 'daffy duck'
 
     # 2.1 TODO: Let's save the lowercase version of the employee_name in a new variable 'lower_name'
     # (use a string method to lower the name). Print out the variable.
@@ -90,6 +92,6 @@ def create_employee_email_address():
     # 2.4 TODO: We want to add '@ripplemedia.com' to the end of the string inside joined_names and
     # save it in a variable `email` (use an f-string to combine the username with the email domain)
     # Print out the variable.
-    email = f'{joined_names}@ripplemedia'
+    email = f'{joined_names}@ripplemedia.com'
     print(email)
 # create_employee_email_address()
