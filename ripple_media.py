@@ -24,26 +24,26 @@ def box_office_data():
     ]
 
     # 1.1 TODO: Convert the string `movies_str` into a list and assign it to a variable called `remaining_50_list`
-    remaining_50_list = movies_str.split(",")    
+    remaining_50_list = movies_str.split(',')    
     # NOTE: make sure that the commas that separate the titles in the string don't stay in the titles in the list!
     # Print out the `type` of your new variable, then in a separate print statement, the number of items in it (should be 50).
     print(type(remaining_50_list))
     print(len(remaining_50_list))
     # 1.2 TODO: Hmm. Looks like `remaining_50_list` contains the movie "The Matrix" which is also in the "top_50_list".
     # Let's remove this duplicate title from `remaining_50_list`. 
-    remaining_50_list.remove("The Matrix")
+    remaining_50_list.remove('The Matrix')
     # Let's use our conditional logic to check if "The Matrix" is still in `remaining_50_list`
     # Print `"The Matrix" in remaining_50_list`. It should print out `False`.
     # NOTE: Make sure to double check the list you are removing from!
-    print("The Matrix" in remaining_50_list)
+    print('The Matrix' in remaining_50_list)
 
     # We're down to 49 movies in `remaining_50_list`.
     # 1.3 TODO: Let's add a movie to the end of the list called "Anywhere But Here".
-    remaining_50_list.append("Anywhere But Here")
+    remaining_50_list.append('Anywhere But Here')
     # Let's use conditional logic again to check if the last movie in the list is now "Anywhere But Here".
     # Use 'indexing' and conditional logic to check.
     # NOTE: if there are 50 movies in the list, what's the index of the final movie?
-    print(remaining_50_list[-1]) == 'Anywhere But Here'
+    print(remaining_50_list[-1] == 'Anywhere But Here')
 
     # 1.4 TODO: Let's make sure "remaining_50_list" has exactly 50 movie titles.
     # Print out the number of title-strings in the list (count it with code!)
